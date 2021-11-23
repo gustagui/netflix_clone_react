@@ -1,12 +1,17 @@
 import Logo from './assets/images/logo.png'
 import Motivo1 from './assets/images/motivo-1.png'
 import Motivo2 from './assets/images/motivo-2.png'
+import Button from './components/Button'
+import Section from './components/Section'
+import MOTIVOS from './constants/motivos'
 
-import './app.css'
+import './netflix.css'
 
 function App() {
-  return (
-    <>
+  const idioma = 'ENG';
+
+  return (    
+    <div>
       <header>
         <div>
           <img src={Logo} alt="Logo" />
@@ -16,7 +21,7 @@ function App() {
             <option value="PT">Português</option>
             <option value="ING">Ingles</option>
           </select>
-          <button>Entrar</button>
+          <Button variante="sucesso" text='Entrar' />
         </div>
       </header>
       <section id="banner">
@@ -31,63 +36,36 @@ function App() {
         </small>
         <div>
           <input type="email" placeholder="Email" />
-          <button>Vamos Lá</button>
+          <Button variante="alerta" text= 'Vamos lá' />
         </div>
       </section>
       <hr className="divisor" />
-      <section className="motivos">
-        <div>
-          <h1>Aproveite na TV.</h1>
-          <p>
-            Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-            aparelhos de Blu-ray e outros dispositivos.
-          </p>
-        </div>
-        <div>
-          <img src={Motivo1} alt="Motivo 1" />
-        </div>
-      </section>
+
+      <Section title={MOTIVOS[idioma].ONE.TITLE} 
+            description={MOTIVOS[idioma].ONE.DESCRIPTION}
+            image={Motivo1} />
+
       <hr className="divisor" />
-      <section className="motivos alterna">
-        <div>
-          <h1>Aproveite na TV.</h1>
-          <p>
-            Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-            aparelhos de Blu-ray e outros dispositivos.
-          </p>
-        </div>
-        <div>
-          <img src={Motivo2} alt="Motivo 1" />
-        </div>
-      </section>
+
+      <Section title={MOTIVOS[idioma].ONE.TITLE}
+            description={MOTIVOS[idioma].ONE.DESCRIPTION} 
+            image={Motivo2} alterna={true} />
+
       <hr className="divisor" />
-      <section className="motivos">
-        <div>
-          <h1>Aproveite na TV.</h1>
-          <p>
-            Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-            aparelhos de Blu-ray e outros dispositivos.
-          </p>
-        </div>
-        <div>
-          <img src={Motivo1} alt="Motivo 1" />
-        </div>
-      </section>
+
+      <Section title={MOTIVOS[idioma].ONE.TITLE}
+            description={MOTIVOS[idioma].ONE.DESCRIPTION} 
+            image={Motivo2}  />
+
       <hr className="divisor" />
-      <section className="motivos alterna">
-        <div>
-          <h1>Aproveite na TV.</h1>
-          <p>
-            Assista em Smart TVs, PlayStation, Xbox, Chromecast, Apple TV,
-            aparelhos de Blu-ray e outros dispositivos.
-          </p>
-        </div>
-        <div>
-          <img src={Motivo1} alt="Motivo 1" />
-        </div>
-      </section>
+
+      <Section title={MOTIVOS[idioma].ONE.TITLE}
+            description={MOTIVOS[idioma].ONE.DESCRIPTION} 
+            image={Motivo2} alterna={true} />
+
       <hr className="divisor" />
-    </>
+      
+    </div>
   );
 }
 
