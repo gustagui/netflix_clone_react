@@ -36,9 +36,8 @@ header #login select {
   padding: 10px 20px;
 }
 
-
 section#banner {
-  background-image: url("../../assets/images/banner.jpg");
+  background-image: url("../../assets/img/banner.jpg");
   color: #fff;
   height: 80vh;
   display: flex;
