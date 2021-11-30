@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Header from '../../components/Header';
 import Filme from '../../components/Filme';
 import './style.css'
@@ -24,10 +24,15 @@ export default function Movies() {
         setFilmes([...data.results, ...filmes]);
     }
 
-    return (
+    // sua função será executada logo no carregamento do componente
+    useEffect(() =>{
+        addFilmes();
+    }, []);
+
+    return (        
+
         <main id="movies">
-            <Header />
-            
+            <Header />            
             
             <div className="list-movies">
             <button onClick={addFilmes}>Adicionar filme</button>
