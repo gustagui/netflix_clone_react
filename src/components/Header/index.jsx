@@ -7,7 +7,7 @@ export default function Header () {
         <header>
         <div>
           <img src={Logo} alt="Logo" />
-          <a href="/about">Link pra About</a>
+          {/* teste react */}
           <Link to="/about">Link pra About</Link>
         </div>
         <div id="login">

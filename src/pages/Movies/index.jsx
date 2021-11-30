@@ -28,6 +28,7 @@ export default function Movies() {
         <main id="movies">
             <Header />
             
+            
             <div className="list-movies">
             <button onClick={addFilmes}>Adicionar filme</button>
                 {filmes.map((filme, index) => {

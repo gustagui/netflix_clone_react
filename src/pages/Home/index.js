@@ -59,9 +59,6 @@ export default function Home() {
       />
       <hr className="divisor" />
 
-      <div>
-        <h1>teste</h1>
-      </div>
     </div>
   );
 }
